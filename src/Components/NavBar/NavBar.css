@@ -36,30 +36,23 @@
     align-items: center;
 }
 
-.NavBar__nav__ul__div{
+.NavBar__nav__ul__li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 90%;
     border-radius: 100%;
     padding: 0 1.5rem;
     width: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.NavBar__nav__ul__div__li{
     text-decoration: none;
     list-style: none;
     cursor: pointer;
 }
 
-.NavBar__nav__ul__div:hover{
+.NavBar__nav__ul__li:hover{
     background-color: #ddd;
     transition: all 1.5s;
     opacity: 0.4;
     transform: rotatey(1turn);
-}
-
-.NavBar__nav__ul__div__li:hover{
-    transition: all 1s;
-    
 }

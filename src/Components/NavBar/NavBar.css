@@ -1,0 +1,65 @@
+.NavBar__nav{
+    font-family: "Raleway", sans-serif;
+    height: 6rem;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.NavBar__nav__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBar__nav__div:hover{
+    transition: all 1.5s;
+    transform: rotatey(1turn);
+    animation-iteration-count: infinite;
+}
+
+.NavBar__nav__div__img{
+    width: 4.5rem;
+    margin: 0.5rem 1rem;
+}
+
+.NavBar__nav__div__span{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.NavBar__nav__ul{
+    display: flex;
+    justify-content: space-around;
+    height: 4rem;
+    align-items: center;
+}
+
+.NavBar__nav__ul__div{
+    height: 90%;
+    border-radius: 100%;
+    padding: 0 1.5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavBar__nav__ul__div__li{
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+.NavBar__nav__ul__div:hover{
+    background-color: #ddd;
+    transition: all 1.5s;
+    opacity: 0.4;
+    transform: rotatey(1turn);
+}
+
+.NavBar__nav__ul__div__li:hover{
+    transition: all 1s;
+    
+}

@@ -1,4 +1,5 @@
 import './NavBar.css'
+import Cart from './Cart.js'
 
 
 const NavBar = () => {
@@ -15,6 +16,7 @@ const NavBar = () => {
                 <li className="NavBar__nav__ul__li">Baño</li>
                 <li className="NavBar__nav__ul__li">Naturaleza</li>
             </ul>
+            <Cart cartImg="./images/cart.svg" itemsCart={10} />
         </nav>
     )
 }

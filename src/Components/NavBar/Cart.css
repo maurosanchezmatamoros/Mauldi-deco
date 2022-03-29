@@ -1,0 +1,20 @@
+.cart{
+    box-shadow: 3px 3px #666;
+    border-radius: 8px;
+    background-color: #bbb;
+    width: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.cart__img{
+    width: 2rem;
+    padding: 0.3rem;
+}

@@ -1,0 +1,9 @@
+.catalogo{
+    padding: 1rem;
+    position: absolute;
+}
+
+.catalogo:hover{
+    transform: translate(200%);
+    transition: 1s;
+}

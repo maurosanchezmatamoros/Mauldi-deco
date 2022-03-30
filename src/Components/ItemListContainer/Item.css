@@ -1,0 +1,26 @@
+.item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #ccc;
+    width: 15rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.item__id{
+    font-size: 0.7rem;
+}
+
+.item__price{
+    font-size: 1.2rem;
+}
+
+p{
+    padding: 0.3rem;
+}
+
+img{
+    width: 80%;
+}

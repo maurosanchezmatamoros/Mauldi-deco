@@ -1,5 +1,6 @@
-.ItemListContainer{
-    width: 100%;
+.ItemList{
     display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem;
     justify-content: space-around;
 }

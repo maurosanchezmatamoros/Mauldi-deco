@@ -1,11 +1,11 @@
 import "./ItemCount.css"
 import { useState } from 'react'
 
-const ItemCount = ({product, stockInicial, addToCart}) => {
+const ItemCount = ({stock, addToCart}) => {
     const [count, setCount] = useState(0)
 
     const add = () => {
-        if(count < stockInicial){
+        if(count < stock){
             setCount(count + 1)
         }
     }
@@ -18,11 +18,10 @@ const ItemCount = ({product, stockInicial, addToCart}) => {
 
     return (
         <div className="itemCount">
-            <p>{product}</p>
-            <p>Stock: {stockInicial}</p>
+            <p>Stock: {stock}</p>
             <div className="itemCount__div">
                 <button onClick={subtract}>➖</button>
-                <p>{count}</p>
+                <p>{count} unidades</p>
                 <button onClick={add}>➕</button>
             </div>
             <button onClick={() => addToCart(count)}>AGREGAR AL CARRITO</button>

@@ -1,9 +1,8 @@
 .catalogo{
     padding: 1rem;
-    position: absolute;
 }
 
 .catalogo:hover{
-    transform: translate(200%);
+    transform: translate(50%);
     transition: 1s;
 }

@@ -1,0 +1,31 @@
+.itemCount{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 8rem;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #ccc;
+    font-family: "Raleway", sans-serif;
+    border-radius: 10px;
+}
+
+.itemCount__div{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    font-family: "Raleway", sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+p{
+    margin: 0;
+}

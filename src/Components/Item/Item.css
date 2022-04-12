@@ -1,6 +1,7 @@
 .item{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     border-radius: 10px;
     background-color: #ccc;
@@ -17,19 +18,19 @@
     font-size: 1.2rem;
 }
 
-p{
+.item p{
     padding: 0.3rem;
 }
 
-a{
+.item a{
     width: 80%;
 }
 
-img{
+.item img{
     width: 100%;
 }
 
-img:hover{
+.item img:hover{
     opacity: 0.5;
     cursor: pointer;
 }

@@ -1,7 +1,5 @@
 .ItemListContainer{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
     background-image: url("../../Images/fondoPalmeras.png");
-    ;
+    min-height: 100vh;
 }

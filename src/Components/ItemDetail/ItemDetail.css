@@ -1,0 +1,42 @@
+.itemDetail{
+    width: 90%;
+    height: 50rem;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.itemDetail__img{
+    padding: 2rem;
+    height: 40rem;
+}
+
+.itemDetail__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.itemDetail__text__name{
+    font-size: 2rem;
+}
+
+.itemDetail__text__id{
+    font-size: 1rem;
+}
+
+.itemDetail__text__price{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+.itemDetail__text__description{
+    font-size: 1rem;
+    margin: 2rem 0;
+}
+
+
+

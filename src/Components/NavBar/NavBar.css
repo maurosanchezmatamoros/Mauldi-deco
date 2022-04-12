@@ -8,36 +8,42 @@
     border-bottom: 5px solid #ddd;
 }
 
-.NavBar__nav__div{
+.NavBar__nav__logo-link{
+    text-decoration: none;
+    max-width: 13rem;
+}
+
+.NavBar__nav__logo{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.NavBar__nav__div:hover{
+.NavBar__nav__logo:hover{
     transition: all 1.5s;
     transform: rotatey(1turn);
     animation-iteration-count: infinite;
 }
 
-.NavBar__nav__div__img{
+.NavBar__nav__logo__img{
     width: 4.5rem;
     margin: 0.5rem 1rem;
 }
 
-.NavBar__nav__div__span{
+.NavBar__nav__logo__span{
     font-size: 1.8rem;
     text-align: center;
+    color: #000;
 }
 
-.NavBar__nav__ul{
+.NavBar__nav__cat{
     display: flex;
     justify-content: space-around;
     height: 100%;
     margin: 0;
 }
 
-.NavBar__nav__ul__li{
+.NavBar__nav__cat__link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,11 +53,29 @@
     text-decoration: none;
     list-style: none;
     cursor: pointer;
+    color: #000;
 }
 
-.NavBar__nav__ul__li:hover{
+.NavBar__nav__cat__link-active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.5rem;
+    width: 5rem;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    background-color: #eee;
+    color: #000;
+}
+
+
+.NavBar__nav__cat__link:hover{
     background-color: #eee;
     transition: all 1.5s;
     opacity: 0.4;
     transform: rotatey(1turn);
+    text-decoration: none !important;
+    color: #000;
 }

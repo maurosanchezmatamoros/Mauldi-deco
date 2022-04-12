@@ -1,11 +1,11 @@
+import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
-import "./Item.css"
 
 const handleAddToCart = (quantity) => {
     alert(`Se agregaron ${quantity} unidades al carrito`)
     }
 
-const Item = ({ id, productName, pictureUrl, price, stock }) => {
+const ItemDetail = ({ id, productName, pictureUrl, price, stock }) => {
 
     return (
         <div className="item">
@@ -16,6 +16,7 @@ const Item = ({ id, productName, pictureUrl, price, stock }) => {
             <ItemCount stock={stock} addToCart={handleAddToCart}/>
         </div>
     )
+
 }
 
-export default Item
+export default ItemDetail

@@ -21,8 +21,12 @@ p{
     padding: 0.3rem;
 }
 
-img{
+a{
     width: 80%;
+}
+
+img{
+    width: 100%;
 }
 
 img:hover{

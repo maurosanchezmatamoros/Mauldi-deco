@@ -1,6 +1,6 @@
-import './Cart.css'
+import './CartWidget.css'
 
-const Cart = (props) => {
+const CartWidget = (props) => {
     return (
         <div className='cart'>
             <img src={props.cartImg} className="cart__img" alt="carrito de compras" />
@@ -9,4 +9,4 @@ const Cart = (props) => {
     )
 }
 
-export default Cart
+export default CartWidget

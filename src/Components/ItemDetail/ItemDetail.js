@@ -1,11 +1,16 @@
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
-
-const handleAddToCart = (quantity) => {
-    alert(`Se agregaron ${quantity} unidades al carrito`)
-    }
+import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const ItemDetail = ({ id, productName, bigPictureUrl, price, stock, description }) => {
+
+    const [quantity, setQuantity] = useState()
+
+    const handleAddToCart = (count) => {
+        console.log(`Se agregaron ${count} unidades al carrito`)
+        setQuantity(count)
+    }
 
     return (
         <div className="itemDetail">
@@ -15,7 +20,7 @@ const ItemDetail = ({ id, productName, bigPictureUrl, price, stock, description 
                 <p className="itemDetail__text__id">(Cód. {id})</p>
                 <p className="itemDetail__text__price">$ {price}</p>
                 <p className="itemDetail__text__description">{description}</p>
-                <ItemCount stock={stock} addToCart={handleAddToCart}/>
+                {quantity > 0 ? <Link to='/cart'><button className="itemDetail__text__cart">Ir al carrito</button></Link> : <ItemCount stock={stock} addToCart={handleAddToCart}/>}
             </div>
         </div>
     )

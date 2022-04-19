@@ -38,5 +38,10 @@
     margin: 2rem 0;
 }
 
+.itemDetail__text__cart{
+    background-color: #bbb;
+    box-shadow: 3px 3px #666;
+}
+
 
 

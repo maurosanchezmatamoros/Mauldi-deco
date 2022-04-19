@@ -1,5 +1,5 @@
 import './NavBar.css'
-import Cart from './Cart.js'
+import CartWidget from '../CartWidget/CartWidget'
 import { getCategories } from "../../asyncmock"
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from "react-router-dom"
@@ -28,7 +28,7 @@ const NavBar = () => {
                         {cat.description}
                     </NavLink>)}
             </div>
-            <Cart cartImg="./images/cart.svg" itemsCart={0} />
+            <CartWidget cartImg="./images/cart.svg" itemsCart={0} />
         </nav>
     )
 }

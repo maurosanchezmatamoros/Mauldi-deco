@@ -28,7 +28,7 @@ const NavBar = () => {
                         {cat.description}
                     </NavLink>)}
             </div>
-            <CartWidget cartImg="./images/cart.svg" itemsCart={0} />
+            <CartWidget />
         </nav>
     )
 }

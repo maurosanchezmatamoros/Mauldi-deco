@@ -1,11 +1,14 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { getCategories } from "../../asyncmock"
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from "react-router-dom"
+import CartContext from '../../Context/CartContext'
 
 
 const NavBar = () => {
+
+    const { cart } = useContext(CartContext)
 
     const [categories, setCategories] = useState([])
 
@@ -18,7 +21,7 @@ const NavBar = () => {
         <nav className="NavBar__nav">
             <Link className="NavBar__nav__logo-link" to="/" >
                 <div className="NavBar__nav__logo">
-                    <img src="./images/logoChico.jpg" alt="mauldi logo" className="NavBar__nav__logo__img"/>
+                    <img src="../images/logoChico.jpg" alt="mauldi logo" className="NavBar__nav__logo__img"/>
                     <span className="NavBar__nav__logo__span">Mauldi Deco</span>
                 </div>
             </Link>
@@ -28,7 +31,7 @@ const NavBar = () => {
                         {cat.description}
                     </NavLink>)}
             </div>
-            <CartWidget />
+            { cart.length === 0 ? <div></div> : <CartWidget /> }
         </nav>
     )
 }

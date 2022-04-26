@@ -1,0 +1,28 @@
+.Cart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../images/fondoPalmeras.png");
+    min-height: 100vh;
+}
+
+.Cart__clear{
+    background-color: #ccc;
+}
+
+.Cart__prods{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Cart__total{
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.Cart__noProducts{
+    text-align: center;
+}

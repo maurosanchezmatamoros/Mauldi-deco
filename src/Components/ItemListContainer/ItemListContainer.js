@@ -30,7 +30,7 @@ const ItemListContainer = () => {
     }, [categoryId])
 
     return(
-        <div className="ItemListContainer">
+        <div className="ItemListContainer" style={{backgroundImage: 'url("../../images/fondoPalmeras.png")'}}>
             { loading? <Loader></Loader> : <ItemList products={products}/> }
         </div>
     )

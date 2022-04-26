@@ -34,7 +34,7 @@ const ItemDetailContainer = ({ cart, setCart }) => {
     }
 
     return (
-        <div className="ItemDetailContainer" >
+        <div className="ItemDetailContainer" style={{backgroundImage: 'url("../../images/fondoPalmeras.png")'}}>
             { product? <ItemDetail  {...product} setCart={setCart} cart={cart} /> : <h1>El producto no existe</h1> }
         </div>
     )

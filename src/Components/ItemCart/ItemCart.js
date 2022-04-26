@@ -7,7 +7,7 @@ const ItemCart = ({ prod, handleRemoveItem }) => {
     const { removeItem } = useContext(CartContext)
 
     return(
-            <div className="ItemCart">
+            <div className="ItemCart shadow">
                 <div className="ItemCart">
                     <img className="ItemCart__img" src={prod.pictureUrl} alt={prod.productName}></img>
                     <div className="ItemCart__main">

@@ -10,18 +10,18 @@ const Cart = () => {
     let total = 0
     cart.forEach(prod => total += prod.price * prod.quantity)
 
-    if(cart.length == 0) {
+    if(cart.length === 0) {
         return(
-            <div className="Cart">
+            <div className="Cart" style={{backgroundImage: 'url("../../images/fondoPalmeras.png")'}}>
                 <h1 className="Cart__noProducts">No hay productos en el carrito</h1>
             </div>
         )
     }
 
     return (
-        <div className="Cart">
+        <div className="Cart" style={{backgroundImage: 'url("../../images/fondoPalmeras.png")'}}>
             <h1 className="Cart__title">Carrito de compras</h1>
-            <button className="Cart__clear" onClick={clearCart}>Vaciar Carrito</button>
+            <button className="Cart__clear shadow" onClick={clearCart}>Vaciar Carrito</button>
             <div className="Cart__prods"> { cart.map(prod => <ItemCart key={prod.id} prod={prod}></ItemCart>) } </div>
             <p className="Cart__total">Total: $ {total}</p>
         </div>

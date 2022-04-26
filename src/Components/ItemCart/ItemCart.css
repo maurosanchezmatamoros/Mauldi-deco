@@ -1,3 +1,7 @@
+.shadow{
+    box-shadow: 3px 3px #666;
+}
+
 .ItemCart{
     width: 90%;
     height: 10rem;

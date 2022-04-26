@@ -1,9 +1,10 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
-import { getCategories } from "../../asyncmock"
 import { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from "react-router-dom"
 import CartContext from '../../Context/CartContext'
+import { getDocs, collection } from "firebase/firestore"
+import { firestoreDb } from "../../services/firebase"
 
 
 const NavBar = () => {
@@ -13,15 +14,20 @@ const NavBar = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        getCategories()
-        .then(categories => setCategories(categories))
+        getDocs(collection(firestoreDb, 'categories'))
+        .then(response => {
+            const categories = response.docs.map(doc => {
+            return { id: doc.id, ...doc.data() }
+            })
+            setCategories(categories)
+        })
     },[])
 
     return(
         <nav className="NavBar__nav">
             <Link className="NavBar__nav__logo-link" to="/" >
                 <div className="NavBar__nav__logo">
-                    <img src="../images/logoChico.jpg" alt="mauldi logo" className="NavBar__nav__logo__img"/>
+                    <img src="../../images/logoChico.jpg" alt="mauldi logo" className="NavBar__nav__logo__img"/>
                     <span className="NavBar__nav__logo__span">Mauldi Deco</span>
                 </div>
             </Link>
@@ -31,7 +37,7 @@ const NavBar = () => {
                         {cat.description}
                     </NavLink>)}
             </div>
-            { cart.length === 0 ? <div></div> : <CartWidget /> }
+            { cart.length === 0 ? <div></div> : <Link to="/cart" ><CartWidget /></Link> }
         </nav>
     )
 }

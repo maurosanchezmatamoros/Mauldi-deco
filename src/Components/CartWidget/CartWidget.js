@@ -10,7 +10,7 @@ const CartWidget = () => {
 
     return (
         <div className='cart'>
-            <img src="../images/cart.svg" className="cart__img" alt="carrito de compras" />
+            <img src="../../images/cart.svg" className="cart__img" alt="carrito de compras" />
             <p>{ getQuantity() }</p>
         </div>
     )

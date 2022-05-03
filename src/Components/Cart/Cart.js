@@ -1,14 +1,12 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import CartContext from "../../Context/CartContext"
 import ItemCart from "../ItemCart/ItemCart"
 import "./Cart.css"
 
 const Cart = () => {
 
-    const { cart, clearCart } = useContext(CartContext)
-
-    let total = 0
-    cart.forEach(prod => total += prod.price * prod.quantity)
+    const { cart, clearCart, getTotal } = useContext(CartContext)
 
     if(cart.length === 0) {
         return(
@@ -23,7 +21,8 @@ const Cart = () => {
             <h1 className="Cart__title">Carrito de compras</h1>
             <button className="Cart__clear shadow" onClick={clearCart}>Vaciar Carrito</button>
             <div className="Cart__prods"> { cart.map(prod => <ItemCart key={prod.id} prod={prod}></ItemCart>) } </div>
-            <p className="Cart__total">Total: $ {total}</p>
+            <p className="Cart__total">Total: $ {getTotal()}</p>
+            <Link to="/cart/order"><button className="Cart__order shadow">Continuar compra</button></Link>
         </div>
     )
 }

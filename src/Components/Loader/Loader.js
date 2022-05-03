@@ -9,4 +9,10 @@ const Loader = () => {
     )
 }
 
+export const LoaderWidget = () => {
+    return(
+        <div className="loader"></div>
+    )
+}
+
 export default Loader

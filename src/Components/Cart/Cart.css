@@ -10,6 +10,10 @@
     min-height: 100vh;
 }
 
+.HideCart{
+    visibility: collapse;
+}
+
 .Cart__clear{
     background-color: #ccc;
 }
@@ -28,4 +32,8 @@
 
 .Cart__noProducts{
     text-align: center;
+}
+
+.Cart__order{
+    background-color: #ccc;
 }

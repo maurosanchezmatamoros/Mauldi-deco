@@ -1,0 +1,57 @@
+.Order{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.Order__form{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    background-color: #ddd;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.Order__input{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.Order__input input{
+    border: none;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 2rem;
+}
+
+.Order__submit{
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+}
+
+.Order__submit input{
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+
+#orderSubmit:hover{
+    box-shadow: 3px 3px #666;
+}
+
+.Order__input input:focus{
+    box-shadow: 3px 3px #666;
+    border: none;
+}
+
+.Order__loader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

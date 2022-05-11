@@ -6,13 +6,13 @@ import { LoaderWidget } from "../Loader/Loader"
 import "./Order.css"
 import swal from "sweetalert"
 import { Formik, Form, Field, ErrorMessage } from "formik"
+import { Link } from "react-router-dom"
 
 const Order = () => {
 
     const { cart, getTotal, clearCart } = useContext(CartContext)
     const [loading, setLoading] = useState(false)
-    const [disabledSubmit, setDisabledSubmit] = useState(false)
-    const [orderSubmit, setOrderSubmit] = useState("orderSubmit")
+    const [orderSent, setOrderSent] = useState(false)
 
     const createOrder = (valores) => {
         const order = {
@@ -48,6 +48,7 @@ const Order = () => {
                 batch.commit()
                 swal("Felicitaciones!", `Se agregó la orden de compra con el ID: ${id}`, "success")
                 console.log(`Se agregó la orden de compra con el ID: ${id}`)
+                setOrderSent(true)
                 clearCart()
             }).catch(err => {
                 console.log(err)
@@ -73,17 +74,19 @@ const Order = () => {
                     if (!$values.name){
                         errores.name = 'Por favor ingresa un nombre'
                     } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test($values.name)){
-                        errores.name = 'El nombre solo puede contener letras y/o espacios'
+                        errores.name = 'El nombre sólo puede contener letras y/o espacios'
                     }
 
                     if (!$values.lastName){
                         errores.lastName = 'Por favor ingresa un apellido'
                     } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test($values.lastName)){
-                        errores.lastName = 'El apellido solo puede contener letras y/o espacios'
+                        errores.lastName = 'El apellido sólo puede contener letras y/o espacios'
                     }
 
                     if (!$values.cel){
                         errores.cel = 'Por favor ingresa un número de contacto'
+                    } else if (!/^[0-9]+/.test($values.cel)){
+                        errores.cel = 'Sólo puede contener números'
                     }
 
                     if (!$values.email){
@@ -98,8 +101,6 @@ const Order = () => {
                 onSubmit = {(valores, {resetForm}) => {
                     createOrder(valores)
                     setLoading(true)
-                    setDisabledSubmit(true)
-                    setOrderSubmit("")
                     resetForm()
                 }}>
 
@@ -132,7 +133,8 @@ const Order = () => {
                         <Field 
                             type="number" 
                             name="cel" 
-                            id="cel" 
+                            id="cel"
+                            min="1"
                         />
                     </div>
                         <ErrorMessage name="cel" component={() => (
@@ -152,12 +154,22 @@ const Order = () => {
                     {loading?
                     <div className="Order__loader"><LoaderWidget></LoaderWidget></div>
                     :
+                    orderSent?
+                    <div className="Order__submit">
+                        <Link to="/">
+                            <input
+                                type="button"
+                                value="Regresar al inicio"
+                                id="orderSubmit"
+                            />
+                        </Link>
+                    </div>
+                    :
                     <div className="Order__submit">
                         <input 
                             type="submit" 
                             value="Enviar orden de compra" 
-                            id={orderSubmit} 
-                            disabled={disabledSubmit}
+                            id="orderSubmit"
                         />
                     </div>
                     }

@@ -27,12 +27,13 @@
     border-radius: 1rem;
     width: 20rem;
     height: 2rem;
+    padding: 0 0.5rem
 }
 
 .Order__input__error{
     display: flex;
     justify-content: flex-start;
-    padding: 0 0 0 9rem;
+    padding: 0 0 0 8rem;
     font-size: 0.8rem;
     color: #D50000;
     font-weight: 600;

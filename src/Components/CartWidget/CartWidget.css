@@ -23,3 +23,20 @@ a{
     width: 2rem;
     padding: 0.3rem;
 }
+
+@media screen and (max-width: 970px){
+    .cart{
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .cart{
+        width: 3rem;
+    }
+    .cart__img{
+        width: 1.5rem;
+    }
+}

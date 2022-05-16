@@ -12,11 +12,11 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const { categoryId } = useParams()
+    const { categoryOrder } = useParams()
 
     useEffect(() => {
-        const collectionRef = categoryId
-        ? query(collection(firestoreDb, 'products'), where('category', '==', categoryId))
+        const collectionRef = categoryOrder?
+        query(collection(firestoreDb, 'products'), where('category', '==', categoryOrder))
         : collection(firestoreDb, 'products')
 
         getDocs(collectionRef)
@@ -27,7 +27,7 @@ const ItemListContainer = () => {
             setProducts(products)
         })
         .finally(() => setLoading(false))
-    }, [categoryId])
+    }, [categoryOrder])
 
     return(
         <div className="ItemListContainer" style={{backgroundImage: 'url("../../images/fondoPalmeras.png")'}}>

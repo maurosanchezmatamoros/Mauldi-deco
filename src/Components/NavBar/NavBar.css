@@ -10,7 +10,7 @@
 
 .NavBar__nav__logo-link{
     text-decoration: none;
-    max-width: 13rem;
+    width: 13rem;
 }
 
 .NavBar__nav__logo{
@@ -26,7 +26,7 @@
 }
 
 .NavBar__nav__logo__img{
-    width: 4.5rem;
+    max-width: 4.5rem;
     margin: 0.5rem 1rem;
 }
 
@@ -78,4 +78,88 @@
     transform: rotatey(1turn);
     text-decoration: none !important;
     color: #000;
+}
+
+.NavBar__nav__menuIcon{
+    width: 100%;
+    height: 2rem;
+    visibility: collapse;
+    position: absolute;
+}
+
+.NavBar__nav__menuIcon-false{
+    width: 100%;
+    height: 2rem;
+    visibility: collapse;
+    position: absolute;
+}
+
+.NavBar__nav__menuIcon:hover{
+    background-color: #eee;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 970px){
+    .NavBar__nav{
+        flex-direction: column;
+        height: auto;
+    }
+    .NavBar__nav__cat{
+        flex-direction: column;
+        width: 100%;
+        visibility: collapse;
+        position: absolute;
+    }
+    .NavBar__nav__cat-false{
+        flex-direction: column;
+        width: 100%;
+    }
+    .NavBar__nav__cat__link{
+        width: 100%;
+        line-height: 3rem;
+        padding: 0;
+    }
+    .NavBar__nav__menuIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        position: inherit;
+    }
+    .NavBar__nav__menuIcon-false{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        position: inherit;
+        transform: rotate(180deg);
+    }
+    .NavBar__nav__menuIcon-false:hover{
+        background-color: #eee;
+        opacity: 0.4;
+        cursor: pointer;
+    }
+    .NavBar__nav__cat__link-active{
+        width: 100%;
+        padding: 0;
+        line-height: 3rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+.NavBar__nav__logo{
+    width: 10rem;
+    margin: 1rem 0;
+}
+.NavBar__nav__logo-link{
+    width: 10rem;
+}
+.NavBar__nav__logo__img{
+    width: 4rem;
+    margin: auto;
+}
+.NavBar__nav__logo__span{
+    font-size: 1.5rem;
+}
 }

@@ -20,10 +20,11 @@ const ItemDetail = ({ id, productName, bigPictureUrl, price, stock, description,
 
     return (
         <div className="itemDetail">
-            <img className="itemDetail__img" src={bigPictureUrl} alt={productName}></img>
+            <div className="itemDetail__img"><img src={bigPictureUrl} alt={productName}></img></div>
             <div className="itemDetail__text">
                 <p className="itemDetail__text__name">{productName}</p>
                 <p className="itemDetail__text__id">(Cód. {id})</p>
+                <img className="itemDetail__text__img" src={pictureUrl} alt={productName}></img>
                 <p className="itemDetail__text__price">$ {price}</p>
                 <p className="itemDetail__text__description">{description}</p>
                 {isInCart(id) ? <Link to='/cart'><button className="itemDetail__text__cart">Ir al carrito</button></Link> : <ItemCount stock={stock} addToCart={handleAddToCart}/>}

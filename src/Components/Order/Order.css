@@ -9,7 +9,7 @@
 .Order__form{
     display: flex;
     flex-direction: column;
-    width: 30rem;
+    max-width: 30rem;
     background-color: #ddd;
     padding: 2rem;
     border-radius: 1rem;
@@ -20,6 +20,10 @@
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
+}
+
+.Order__input label{
+    margin-right: 0.5rem;
 }
 
 .Order__input input{
@@ -64,4 +68,21 @@
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 580px){
+    .Order__form{
+        width: calc(90% - 2rem);
+        padding: 1rem;
+    }
+    .Order__input{
+        flex-wrap: wrap;
+    }
+    .Order__input input{
+        width: 100%;
+    }
+    .Order__input label{
+        width: 100%;
+        padding-bottom: 0.5rem;
+    }
 }

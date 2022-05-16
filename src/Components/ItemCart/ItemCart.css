@@ -4,14 +4,21 @@
 
 .ItemCart{
     width: 90%;
-    height: 10rem;
+    min-height: 10rem;
     border-radius: 1rem;
     border: none;
     background-color: #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 1rem;
+    position: relative;
+}
+
+.ItemCart__content{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
 }
 
 .ItemCart__main{
@@ -20,6 +27,7 @@
     align-items: center;
     justify-content: center;
     max-width: 50%;
+    text-align: center;
 }
 
 .ItemCart__price{
@@ -40,11 +48,13 @@
 
 .ItemCart__img{
     max-height: 9rem;
-    margin: 0 2rem;
+    margin: 0 1rem;
     border-radius: 1rem;
 }
 
 .ItemCart__close{
-    position: relative;
-    margin: 0.5rem 0.5rem auto auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem 0.5rem 0 0;
 }

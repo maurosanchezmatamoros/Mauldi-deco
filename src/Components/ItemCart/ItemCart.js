@@ -8,7 +8,7 @@ const ItemCart = ({ prod, handleRemoveItem }) => {
 
     return(
             <div className="ItemCart shadow">
-                <div className="ItemCart">
+                <div className="ItemCart__content">
                     <img className="ItemCart__img" src={prod.pictureUrl} alt={prod.productName}></img>
                     <div className="ItemCart__main">
                         <h2 className="ItemCart__main__title">{prod.productName}</h2>

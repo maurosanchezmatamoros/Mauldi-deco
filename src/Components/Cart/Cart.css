@@ -14,6 +14,10 @@
     visibility: collapse;
 }
 
+.Cart__title{
+    text-align: center;
+}
+
 .Cart__clear{
     background-color: #ccc;
 }
@@ -36,4 +40,5 @@
 
 .Cart__order{
     background-color: #ccc;
+    margin-bottom: 1rem;
 }

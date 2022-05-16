@@ -3,6 +3,7 @@ import ItemCount from "../ItemCount/ItemCount"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import CartContext from "../../Context/CartContext"
+import swal from "sweetalert"
 
 const ItemDetail = ({ id, productName, bigPictureUrl, price, stock, description, pictureUrl }) => {
 
@@ -14,7 +15,8 @@ const ItemDetail = ({ id, productName, bigPictureUrl, price, stock, description,
             id, productName, price, description, pictureUrl, stock, quantity: count
         }
 
-        addItem(productObj)
+        if(count !== 0){addItem(productObj)}
+        else{swal("Seleccione cantidad de unidades a agregar al carrito")}
     }
     
 

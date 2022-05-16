@@ -46,9 +46,15 @@
     font-size: 1.5rem;
 }
 
+.ItemCart__imgContainer{
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+
 .ItemCart__img{
     max-height: 9rem;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     border-radius: 1rem;
 }
 

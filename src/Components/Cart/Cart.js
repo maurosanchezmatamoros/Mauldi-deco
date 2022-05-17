@@ -22,7 +22,8 @@ const Cart = () => {
             <button className="Cart__clear shadow" onClick={clearCart}>Vaciar Carrito</button>
             <div className="Cart__prods"> { cart.map(prod => <ItemCart key={prod.id} prod={prod}></ItemCart>) } </div>
             <p className="Cart__total">Total: $ {getTotal()}</p>
-            <Link to="/cart/order"><button className="Cart__order shadow">Continuar compra</button></Link>
+            <Link to="/cart/order"><button className="Cart__order shadow">Finalizar compra</button></Link>
+            <Link to="/"><button className="Cart__order shadow">Seguir comprando</button></Link>
         </div>
     )
 }

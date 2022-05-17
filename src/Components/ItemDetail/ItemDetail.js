@@ -29,7 +29,13 @@ const ItemDetail = ({ id, productName, bigPictureUrl, price, stock, description,
                 <img className="itemDetail__text__img" src={pictureUrl} alt={productName}></img>
                 <p className="itemDetail__text__price">$ {price}</p>
                 <p className="itemDetail__text__description">{description}</p>
-                {isInCart(id) ? <Link to='/cart'><button className="itemDetail__text__cart">Ir al carrito</button></Link> : <ItemCount stock={stock} addToCart={handleAddToCart}/>}
+                {isInCart(id) ?
+                <div className="itemDetail__text__cartButtons">
+                    <Link to='/cart'><button className="itemDetail__text__cart">Ir al carrito</button></Link>
+                    <Link to='/'><button className="itemDetail__text__cart">Seguir comprando</button></Link>
+                </div>
+                :
+                <ItemCount stock={stock} addToCart={handleAddToCart}/>}
             </div>
         </div>
     )

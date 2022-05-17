@@ -1,5 +1,5 @@
 .itemDetail{
-    width: 100%;
+    width: calc(100% - 2rem);
     padding: 1rem;
     display: flex;
     justify-content: space-around;
@@ -12,6 +12,8 @@
 
 .itemDetail__img img{
     width: 100%;
+    max-height: 35rem;
+    object-fit: scale-down;
 }
 
 .itemDetail__text{
@@ -40,16 +42,27 @@
 .itemDetail__text__price{
     font-size: 1.8rem;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .itemDetail__text__description{
     font-size: 1rem;
     margin: 2rem 0;
+    text-align: center;
 }
 
 .itemDetail__text__cart{
     background-color: #bbb;
     box-shadow: 3px 3px #666;
+    margin: 0.5rem 0.5rem;
+    width: 9rem;
+    text-align: center;
+}
+
+.itemDetail__text__cartButtons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 800px){
@@ -72,6 +85,7 @@
 @media screen and (max-width: 650px){
     .itemDetail{
         padding: 0;
+        width: 100%;
     }
     .itemDetail__img{
         display: none;

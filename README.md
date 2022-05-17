@@ -2,6 +2,7 @@
 ## _Proyecto de e-commerce_
 
 Mauldi es un proyecto de e-commerce realizado íntegramente con React.js, que obtiene los datos ingresados en la plataforma Firebase de Google.
+Esta realizado completamente responsive para poder ser visto correctamente desde cualquier dispositivo.
 
 ## _Componentes_
 
@@ -55,7 +56,12 @@ items: (un array de objetos con los productos agregados a la orden de compra y t
 total: (importe total de la compra)
 ***
 
+## _Flujo de la aplicación en video_
+![GIF MauldiDeco](./public/images/mauldi-Deco.gif)
+***
+
 ## _Pendientes_
 - Realizar una sección de admin donde gestionar las ordenes de compra, agregar productos nuevos, eliminar otros y manejar el stock.
 - Agregar footer a la aplicación.
 - Realizar un login a la aplicación.
+***

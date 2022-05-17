@@ -8,6 +8,8 @@ const Cart = () => {
 
     const { cart, clearCart, getTotal } = useContext(CartContext)
 
+    console.log(cart)
+
     if(cart.length === 0) {
         return(
             <div className="Cart" style={{backgroundImage: 'url("../../images/fondoPalmeras.png")'}}>

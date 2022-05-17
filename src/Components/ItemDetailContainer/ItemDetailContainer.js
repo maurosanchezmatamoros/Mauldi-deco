@@ -6,7 +6,7 @@ import Loader from "../Loader/Loader"
 import { firestoreDb } from '../../services/firebase'
 import { getDoc, doc } from 'firebase/firestore'
 
-const ItemDetailContainer = ({ cart, setCart }) => {
+const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
@@ -35,7 +35,7 @@ const ItemDetailContainer = ({ cart, setCart }) => {
 
     return (
         <div className="ItemDetailContainer" style={{backgroundImage: 'url("../../images/fondoPalmeras.png")'}}>
-            { product? <ItemDetail  {...product} setCart={setCart} cart={cart} /> : <h1>El producto no existe</h1> }
+            { product? <ItemDetail  {...product} /> : <h1>El producto no existe</h1> }
         </div>
     )
 }
